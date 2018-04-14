@@ -1,0 +1,12 @@
+--
+-- CREATE USER service WITH SUPERUSER PASSWORD 'service';
+--
+-- CREATE DATABASE example OWNER service;
+--
+-- \c example
+--
+-- CREATE SCHEMA control AUTHORIZATION service;
+--
+-- CREATE TABLE control.stuff (truth BOOLEAN);
+--
+-- INSERT INTO control.stuff (truth) VALUES (true);
