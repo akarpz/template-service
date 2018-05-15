@@ -1,13 +1,8 @@
-package com.karp.config;
+package org.template.config;
 
 
-import javax.sql.DataSource;
-
-import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -28,12 +23,6 @@ public class DatabaseConfig {
     @Primary
     //@ConfigurationPropcerties(prefix="spring.datasource")
     public HikariDataSource primaryDataSource() {
-//        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-//        dataSourceBuilder.driverClassName(driver);
-//        dataSourceBuilder.url(url);
-//        dataSourceBuilder.username(username);
-//        dataSourceBuilder.password(password);
-//        return dataSourceBuilder.build();
         HikariDataSource hikariDataSource = new HikariDataSource();
         hikariDataSource.setJdbcUrl(url);
         hikariDataSource.setUsername(username);

@@ -16,6 +16,14 @@ dependencies {
     compile 'org.postgresql:postgresql:42.2.2'
     compile 'io.springfox:springfox-swagger2:2.8.0'
     compile 'io.springfox:springfox-swagger-ui:2.8.0'
+    compile 'com.netflix.feign:feign-core:8.16.0'
+    compile 'com.netflix.feign:feign-gson:8.16.0'
+    compile 'com.netflix.feign:feign-jackson:8.16.0'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'com.jayway.restassured:spring-mock-mvc:2.4.0'
 
 }
 

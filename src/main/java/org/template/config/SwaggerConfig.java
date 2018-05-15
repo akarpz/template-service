@@ -1,4 +1,4 @@
-package com.karp.config;
+package org.template.config;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("adam-service")
-            .description("adam's service")
+            .title("template-service")
+            .description("template service")
             .build();
     }
 
