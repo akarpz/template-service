@@ -8,7 +8,7 @@ It has several useful endpoints:
 
 The endpoint `/api/v1/users` allows for the creation of new users.
 
-It requires a `first name`, `last name`, and `email address`, included as path variables on the request.
+It requires a `first name`, `last name`, and `email address`, included as the request body.
 
 Example call to create a user:
 `curl -X POST "http://localhost:8080/api/v1/users" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"emailAddress\": \"email@gmail.com\", \"firstName\": \"Wombat\", \"lastName\": \"Gumbo\"}"`
