@@ -39,6 +39,7 @@ public class TransferOrchestrator {
         return transferDao.getTransfersForUserId(userId);
     }
 
+    //TODO: handle case where user has no transfers
     Integer getTransferSumForUserId(int userId) {
         return transferDao.getTransferSumForUserId(userId);
     }
