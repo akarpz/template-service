@@ -1,4 +1,4 @@
-package org.template.transfer.unit;
+package org.template.transfer;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
