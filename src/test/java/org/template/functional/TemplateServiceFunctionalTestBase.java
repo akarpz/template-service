@@ -1,25 +1,22 @@
 package org.template.functional;
 
-import org.template.Application;
 import com.jayway.restassured.RestAssured;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.template.Application;
 
 
-//TODO: fix this configuration so that application starts up correctly
-//Functional tests will currently run but you need to start the app separately
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = { Application.class })
-@ActiveProfiles("test")
-@WebAppConfiguration
+@SpringBootTest(classes = { Application.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class TemplateServiceFunctionalTestBase {
+
+    @LocalServerPort private Integer port;
 
     @Before
     public void setUp() {
-        RestAssured.port = 8080;
+        RestAssured.port = port;
     }
 }
